@@ -1,0 +1,132 @@
+/* Global reset   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 1440px;
+  background: no-repeat  url("images/pattern-background-desktop.svg");
+  background-color: hsl(225, 100%, 94%);
+}
+
+
+
+.container {
+  background-color: #fff;
+  max-width: 30vw;   /*   The size of widht */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-hero {
+  width: 100%;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: "Red Hat Display";
+  padding: 30px;
+}
+
+.title {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+
+.title-info {
+  line-height: 1.5;
+  color: hsl(224, 23%, 55%);
+}
+
+.price {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 10px;
+  padding: 15px;
+  font-weight: 500;
+}
+
+.price-plan {
+  font-weight: 700;
+  height: 100%;
+  flex: 2 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 15px;
+}
+
+.price-plan :last-child {
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+}
+
+.change {
+  color: hsl(245, 75%, 52%);
+  text-decoration: underline;
+}
+
+.change:hover {
+  cursor: pointer;
+  color: hsla(245, 75%, 52%, 0.75);
+  text-decoration: none;
+}
+
+.payment-button {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  font-family: "Red Hat Display";
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(225, 100%, 98%);
+  background-color: hsl(245, 75%, 52%);
+  border-radius: 10px;
+  box-shadow: 0 15px 10px 5px hsl(225, 100%, 94%);
+}
+
+.payment-button:hover {
+  cursor: pointer;
+  background-color: hsla(245, 75%, 52%, 0.75);
+}
+
+.cancel {
+  font-weight: 700;
+  color: hsl(224, 23%, 55%);
+}
+
+.cancel:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+@media (max-width: 375px) {
+  body {
+    min-width: 375px;
+    background: no-repeat  url("images/pattern-background-mobile.svg");
+    background-color: hsl(225, 100%, 94%);
+  }
+
+  .container {
+    max-width: 90vw;
+    grid-template-rows: 1fr 2.5fr;
+  }
+
+}
